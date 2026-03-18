@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaled Bin A. Rob</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-bar"></div>
+    <canvas id="matrix-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo glitch" data-text="KHALED_BIN_ROB">KHALED</a>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-terminal"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-btn red"></div>
+                        <div class="terminal-btn green"></div>
+                        <div class="terminal-btn yellow"></div>
+                        <span style="margin-left: 10px; color: #717171; font-size: 0.8rem;">khaledbin@rob:~</span>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span class="command"> this is me</span>
+                        </div>
+                        <div class="output">Khaled Bin A. Rob</div>
+                        
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span class="command"> cat role.txt</span>
+                        </div>
+                        <div class="output typing-text"></div><span class="cursor"></span>
+                        
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span class="command"> ./initialize.sh</span>
+                        </div>
+                        <div class="output" style="color: var(--matrix-green);">
+                            [OK] System loaded<br>
+                            [OK] Security protocols active<br>
+                            [OK] Ready for engagement
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p1>Professional with 3.5+ years of experience in network monitoring, troubleshooting, and system support. Specialized in cybersecurity fundamentals and ethical hacking practices.</p1><br><br>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">EXECUTE CONTACT</a>
+                    <a href="#projects" class="btn">VIEW PROJECTS</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/rob2305341207" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/khaled-bin-a-rob-2178a1277/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/EurovanN8531" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/fahim.muntasir.597481/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="profile.jpg" alt="Profile" class="profile-img">
+                    <div class="profile-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">SYSTEM_INFO</h2>
+            <div class="about-content">
+                <div class="info-card">
+                    <h3>Identity Profile</h3>
+                    <p style="color: #888; margin-bottom: 15px;">
+                        <span style="color: var(--matrix-green);">></span> NOC Professional & Aspiring Penetration Tester<br>
+                        <span style="color: var(--matrix-green);">></span> Multilingual: Bangla, English, Arabic, Hindi, Urdu<br>
+                        <span style="color: var(--matrix-green);">></span> Current Status: BSC Student at DIU
+                    </p>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px;">
+                        A dedicated professional with expertise in network infrastructure, system administration, and security protocols. Passionate about ethical hacking and AI integration.
+                    </p>
+                    
+                    <div class="contact-info-grid">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ashulia, Savar, Dhaka (1349)</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+880 1608-253426</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>khaledbinarob@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Work Experience</h3>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h4>Network Operator</h4>
+                            <span class="company">[Explore Online ISP]</span>
+                        </div>
+                        <span class="duration">Dec 2019 - Jun 2023</span>
+                        <span class="location">Mohammadpur, Dhaka</span>
+                        <a href="https://www.exploreonlinebd.net/" target="_blank" class="company-link">ACCESS_URL</a>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h4>Software Tester</h4>
+                            <span class="company">[BornoSoft]</span>
+                        </div>
+                        <span class="duration">Feb 2026 - Present</span>
+                        <span class="location">Savar, Dhaka</span>
+                        <a href="https://bornosoftnr.com/" target="_blank" class="company-link">ACCESS_URL</a>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Education</h3>
+                    
+                    <div class="education-item">
+                        <h4>BSC in Computer Science</h4>
+                        <a href="https://www.daffodilvarsity.edu.bd/" target="_blank" class="company">[Daffodil International University]</a>
+                        <span class="duration">Jun 2023 - Present</span>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h4>HSC</h4>
+                        <a href="https://www.hajigonjdc.edu.bd/" target="_blank" class="company">[Haziganj Degree College]</a>
+                        <span class="duration">May 2018 - Jun 2020</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">SKILL_MATRIX</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Arsenal</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Networking</span>
+                        <span class="skill-tag">Operating Systems</span>
+                        <span class="skill-tag">Programming</span>
+                        <span class="skill-tag">SQA</span>
+                        <span class="skill-tag">Database</span>
+                        <span class="skill-tag">Algorithm</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Robotics</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Specialization</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag interest">Ethical Hacking</span>
+                        <span class="skill-tag interest">Artificial Intelligence</span>
+                        <span class="skill-tag interest">Penetration Testing</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Language Protocols</h3>
+                    <div class="language-list">
+                        <div class="language-item">
+                            <span>Bangla</span>
+                            <div class="language-bar"><div class="language-level" style="width: 100%"></div></div>
+                        </div>
+                        <div class="language-item">
+                            <span>English</span>
+                            <div class="language-bar"><div class="language-level" style="width: 85%"></div></div>
+                        </div>
+                        <div class="language-item">
+                            <span>Arabic</span>
+                            <div class="language-bar"><div class="language-level" style="width: 70%"></div></div>
+                        </div>
+                        <div class="language-item">
+                            <span>Hindi</span>
+                            <div class="language-bar"><div class="language-level" style="width: 65%"></div></div>
+                        </div>
+                        <div class="language-item">
+                            <span>Urdu</span>
+                            <div class="language-bar"><div class="language-level" style="width: 60%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category awards-category">
+                    <h3>Achievements_Log</h3>
+                    <div class="awards-list">
+                        <div class="award-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4>Idea Poster Presentation</h4>
+                                <p>Data Science Club, DIU</p>
+                            </div>
+                        </div>
+                        <div class="award-item">
+                            <i class="fas fa-robot"></i>
+                            <div>
+                                <h4>Robo Soccer</h4>
+                                <p>BUET Robotics Club</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">PROJECT_REPOSITORY</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>BARTER</h3>
+                    <p class="project-type">Skill Exchange Platform</p>
+                    <p>A decentralized skill sharing platform using MERN stack. Peer-to-peer skill exchange without currency intermediaries.</p>
+                    <div class="project-tech">
+                        <span>MERN</span>
+                        <span>Full Stack</span>
+                        <span>REST API</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>SHOPPER</h3>
+                    <p class="project-type">Billing Software</p>
+                    <p>Lightweight accounting solution for retail environments. Built with pure C programming for maximum efficiency.</p>
+                    <div class="project-tech">
+                        <span>C</span>
+                        <span>Desktop</span>
+                        <span>File I/O</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>ONUDAAN</h3>
+                    <p class="project-type">Beneficiary Verification</p>
+                    <p>QR-based beneficiary management system for secure identity verification and story tracking.</p>
+                    <div class="project-tech">
+                        <span>MERN</span>
+                        <span>QR Code</span>
+                        <span>Auth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">ESTABLISH_CONNECTION</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Initiate Communication</h3>
+                    <p>Secure channel open for inquiries and collaboration opportunities. All messages encrypted.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Ashulia, Savar, Dhaka (1349)</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Direct Line</h4>
+                                <p>+880 1608-253426</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Secure Email</h4>
+                                <p>khaledbinarob@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="https://github.com/rob2305341207" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/khaled-bin-a-rob-2178a1277/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/EurovanN8531" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/fahim.muntasir.597481/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder=" " required>
+                        <label>IDENTITY_STRING</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder=" " required>
+                        <label>EMAIL_PROTOCOL</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder=" " required>
+                        <label>MESSAGE_SUBJECT</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder=" " rows="5" required></textarea>
+                        <label>DATA_PACKET</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">TRANSMIT_DATA</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 KHALED_BIN_ROB | SYSTEM_STATUS: <span style="color: var(--matrix-green);">ONLINE</span></p>
+            <div class="footer-links">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
