@@ -970,7 +970,15 @@ section {
 .contact-form {
     background: var(--terminal-gray);
     border: 1px solid rgba(0, 255, 65, 0.2);
-    padding: 40px;
+    padding: 20px;
+    max-width: 560px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.contact-form p {
+    margin: 0;
+    line-height: 1.5;
 }
 
 .form-group {
