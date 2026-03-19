@@ -249,4 +249,193 @@ window.addEventListener('load', () => {
     if (progressBar) {
         progressBar.style.width = '0%';
     }
+});// Typing Effect
+const typingText = document.querySelector('.typing-text');
+const professions = [
+    'Full Stack Developer',
+    'Aspiring DevOps Engineer',
+    'Network Operator',
+    'SQA Tester',
+    'Penetration Tester'
+];
+
+let professionIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+    if (!typingText) return;
+
+    const currentProfession = professions[professionIndex];
+
+    if (isDeleting) {
+        charIndex = Math.max(0, charIndex - 1);
+    } else {
+        charIndex = Math.min(currentProfession.length, charIndex + 1);
+    }
+
+    typingText.textContent = currentProfession.substring(0, charIndex);
+
+    if (!isDeleting && charIndex === currentProfession.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1800);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        professionIndex = (professionIndex + 1) % professions.length;
+        setTimeout(typeEffect, 500);
+    } else {
+        setTimeout(typeEffect, isDeleting ? 40 : 120);
+    }
+}
+
+setTimeout(typeEffect, 1000);
+
+// Navigation
+const navbar = document.querySelector('.navbar');
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const scrollTopBtn = document.querySelector('.scroll-top');
+const progressBar = document.querySelector('.loading-bar');
+const heroImage = document.querySelector('.hero-image');
+
+menuToggle?.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        navLinks.classList.remove('active');
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+
+    if (navbar) {
+        if (scrollY > 100) {
+            navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+            navbar.style.boxShadow = '0 0 25px rgba(0, 255, 65, 0.28)';
+        } else {
+            navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+            navbar.style.boxShadow = '0 0 20px rgba(0, 255, 65, 0.2)';
+        }
+    }
+
+    if (scrollTopBtn) {
+        if (scrollY > 500) {
+            scrollTopBtn.classList.add('active');
+        } else {
+            scrollTopBtn.classList.remove('active');
+        }
+    }
+
+    if (progressBar) {
+        progressBar.style.width = `${progress}%`;
+    }
+
+    if (heroImage) {
+        heroImage.style.transform = `translateY(${scrollY * 0.08}px)`;
+    }
+
+    canvas.style.transform = `translateY(${scrollY * 0.12}px)`;
+}, { passive: true });
+
+// Scroll to top button
+scrollTopBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Contact Form
+const contactForm = document.getElementById('contactForm');
+contactForm?.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const name = formData.get('name')?.toString().trim() || 'Anonymous';
+    const subject = formData.get('subject')?.toString().trim() || 'Message from portfolio';
+    const message = formData.get('message')?.toString().trim() || '';
+
+    const recipient = 'khaledbinarob@gmail.com';
+    const bodyText = `Name: ${name}\n\n${message}`;
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+
+    window.location.href = mailtoLink;
+
+    const btn = this.querySelector('button');
+    const originalText = btn?.textContent || 'TRANSMIT_DATA';
+    if (btn) {
+        btn.textContent = 'OPENING MAIL...';
+        btn.style.background = 'var(--hacker-cyan)';
+        setTimeout(() => {
+            btn.textContent = 'READY TO SEND';
+            btn.style.background = 'var(--matrix-green)';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+            }, 1500);
+        }, 400);
+    }
+});
+
+// Cursor glow
+const glow = document.createElement('div');
+glow.className = 'cursor-glow';
+document.body.appendChild(glow);
+
+document.addEventListener('mousemove', (e) => {
+    glow.style.left = `${e.clientX}px`;
+    glow.style.top = `${e.clientY}px`;
+});
+
+// Reveal animations
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+
+            if (entry.target.classList.contains('skill-category')) {
+                const levels = entry.target.querySelectorAll('.language-level');
+                levels.forEach(level => {
+                    const width = level.style.width;
+                    level.style.width = '0';
+                    setTimeout(() => {
+                        level.style.width = width;
+                    }, 150);
+                });
+            }
+        }
+    });
+}, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+revealElements.forEach((el, index) => {
+    if (el.classList.contains('stagger-item')) {
+        el.style.setProperty('--delay', `${index * 90}ms`);
+    }
+    revealObserver.observe(el);
+});
+
+// Extra stagger for groups
+document.querySelectorAll('.stagger-group .stagger-item').forEach((el, index) => {
+    el.style.transitionDelay = `${index * 90}ms`;
+});
+
+// Keep scroll-top hidden until DOM ready scroll works
+window.addEventListener('load', () => {
+    if (progressBar) {
+        progressBar.style.width = '0%';
+    }
 });
