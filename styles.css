@@ -1,12 +1,12 @@
 :root {
-    --matrix-green: #ec7f03;
+    --matrix-green: #05bdca;
     --matrix-dark: #000000;
     --terminal-bg: #00332f;
     --terminal-gray: #2d2d2d;
-    --hacker-cyan: #ec7f03;
+    --hacker-cyan: #05bdca;
     --alert-red: #ff0040;
-    --amber: #ffae00;
-    --grid-color: rgba(0, 247, 255, 0.172);
+    --amber: #05bdca;
+    --grid-color: rgba(4, 247, 255, 0);
     --glow: 0 0 10px var(--matrix-green), 0 0 20px var(--matrix-green), 0 0 30px var(--matrix-green);
     --glow-cyan: 0 0 10px var(--hacker-cyan), 0 0 20px var(--hacker-cyan);
 }
@@ -508,8 +508,8 @@ section {
 /* About Section */
 .about {
     background: var(--terminal-gray);
-    border-top: 1px solid rgba(0, 255, 65, 0.2);
-    border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+    border-top: 1px solid rgba(4, 184, 169, 0.2);
+    border-bottom: 1px solid rgba(0, 225, 255, 0.2);
 }
 
 .about-content {
@@ -571,7 +571,7 @@ section {
 
 .experience-item, .education-item {
     padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+    border-bottom: 1px solid rgba(0, 255, 221, 0.1);
     position: relative;
 }
 
@@ -632,7 +632,7 @@ section {
 
 .skill-category {
     background: var(--terminal-gray);
-    border: 2px solid rgba(0, 255, 65, 0.55);
+    border: 2px solid rgba(6, 247, 255, 0.534);
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
     border-radius: 8px;
     padding: 30px;
@@ -667,7 +667,7 @@ section {
 
 .skill-tag {
     padding: 8px 16px;
-    background: rgba(0, 255, 65, 0.1);
+    background: rgba(0, 255, 242, 0.1);
     border: 1px solid var(--matrix-green);
     font-size: 0.8rem;
     color: var(--matrix-green);
@@ -716,7 +716,7 @@ section {
     flex: 1;
     height: 6px;
     background: rgba(0, 255, 65, 0.1);
-    border: 1px solid rgba(0, 255, 65, 0.3);
+    border: 1px solid rgba(0, 255, 234, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -762,7 +762,7 @@ section {
     gap: 15px;
     padding: 20px;
     background: var(--terminal-bg);
-    border: 1px solid rgba(0, 255, 65, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.2);
     transition: all 0.3s;
 }
 
@@ -792,7 +792,7 @@ section {
 /* Projects Section */
 .projects {
     background: var(--terminal-gray);
-    border-top: 1px solid rgba(0, 255, 65, 0.2);
+    border-top: 1px solid rgba(0, 238, 255, 0.2);
 }
 
 .projects-grid {
@@ -803,7 +803,7 @@ section {
 
 .project-card {
     background: var(--terminal-bg);
-    border: 1px solid rgba(0, 255, 65, 0.2);
+    border: 1px solid rgba(0, 255, 242, 0.2);
     padding: 30px;
     position: relative;
     transition: all 0.3s;
@@ -849,7 +849,7 @@ section {
     content: '';
     position: absolute;
     inset: 5px;
-    border: 1px solid rgba(0, 255, 65, 0.3);
+    border: 1px solid rgba(0, 225, 255, 0.3);
 }
 
 .project-card h3 {
@@ -881,8 +881,8 @@ section {
 
 .project-tech span {
     padding: 4px 12px;
-    background: rgba(0, 255, 65, 0.1);
-    border: 1px solid rgba(0, 255, 65, 0.3);
+    background: rgba(0, 255, 242, 0.1);
+    border: 1px solid rgba(0, 255, 234, 0.3);
     font-size: 0.75rem;
     color: var(--matrix-green);
 }
@@ -991,7 +991,7 @@ section {
     width: 100%;
     padding: 15px;
     background: var(--terminal-bg);
-    border: 1px solid rgba(0, 255, 65, 0.3);
+    border: 1px solid rgba(0, 255, 242, 0.3);
     color: var(--matrix-green);
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.9rem;
@@ -1002,7 +1002,7 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--matrix-green);
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
 .form-group textarea {
